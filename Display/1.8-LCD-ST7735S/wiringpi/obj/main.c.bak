@@ -1,0 +1,55 @@
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
+
+#include <stdio.h>		//printf()
+#include <stdlib.h>		//exit()
+#include <time.h>  
+
+#include "LCD.h"
+#include "DEV_Config.h"
+
+static uint8_t System_config(void)
+{
+	//1.wiringPiSetupGpio
+	//if(wiringPiSetup() < 0)//use wiringpi Pin number table
+	if(wiringPiSetupGpio() < 0)//use BCM2835 Pin number table
+	{   
+	  printf(" set wiringPi lib failed	!!! \r\n");
+	  return 1;
+	}else{
+	  printf(" set wiringPi lib success  !!! \r\n");
+	}
+	//2.GPIO config
+	pinMode(LCD_RST,OUTPUT);
+	pinMode(LCD_DC,OUTPUT);
+	pinMode(LCD_BL,OUTPUT);
+	pinMode(LCD_CS,OUTPUT);	//must set cs output,Otherwise it does not work
+	
+	//3.spi init
+	//wiringPiSPISetup(0,9000000);
+	wiringPiSPISetupMode (0, 2000000, 0);
+	return 0;
+}
+
+int main(void)
+{
+	//1.SPI Initialization Based on BCM2835 Librar
+	if(System_config())
+		exit(0);
+	
+	//2.show
+	printf("**********Init LCD**********\r\n");
+	LCD_SCAN_DIR Lcd_ScanDir = SCAN_DIR_DFT;//SCAN_DIR_DFT = D2U_L2R
+	LCD_Init( Lcd_ScanDir );	
+	
+	/*---------------------------------------------------------------------------------
+					//LCD basic skill
+	---------------------------------------------------------------------------------*/	
+	printf("LCD Show \r\n");
+	LCD_Show();
+	Driver_Delay_ms(1000);
+	
+	return 0;
+	
+}
+
