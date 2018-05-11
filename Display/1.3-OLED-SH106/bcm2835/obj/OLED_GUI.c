@@ -375,7 +375,7 @@ void GUI_Show(void)
     GUI_DrawCircle(sOLED_DIS.OLED_Dis_Column - 10, 50, 3, WHITE, DRAW_FULL, DOT_PIXEL_DFT);
 
     printf("OLED Display String \r\n ");
-    GUI_DisString_EN(30, 25, "WaveShare ", &Font12, FONT_BACKGROUND, WHITE);
+    GUI_DisString_EN(30, 25, "Electrodragon ", &Font12, FONT_BACKGROUND, WHITE);
     GUI_DisString_EN(28, 35, "Electronic", &Font12, FONT_BACKGROUND, WHITE);
     GUI_DisString_EN(22, 45, "1.3inch OLED", &Font12, FONT_BACKGROUND, WHITE);
 
