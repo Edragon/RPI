@@ -38,9 +38,9 @@ int main(int argc, char **argv)
 			switch(value)
 			{	
 				case 0xFE:
-					printf("left\n");break;	
+					printf("top\n");break;	
 				case 0xFD:
-					printf("up\n");	break;
+					printf("left\n");	break;
 				case 0xFB:
 					printf("dowm\n");break;	
 				case 0xF7:
