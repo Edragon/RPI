@@ -5,7 +5,7 @@ import time
 import atexit
 
 # create a default object, no changes to I2C address or frequency
-mh = Raspi_MotorHAT(addr=0x6f)
+mh = Raspi_MotorHAT(addr=0x70)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
