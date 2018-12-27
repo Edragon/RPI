@@ -1,0 +1,58 @@
+Configuration	STM32_HardWareI2C_MCP23017
+STM32CubeMX 	4.25.0
+Date	08/30/2018
+MCU	STM32F407ZGTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+I2C1	I2C	I2C1_SCL	PB6
+I2C1	I2C	I2C1_SDA	PB7
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	PH0-OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	PH1-OSC_OUT
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+USART1	Asynchronous	USART1_RX	PA10
+USART1	Asynchronous	USART1_TX	PA9
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+23	PH0-OSC_IN	RCC_OSC_IN	
+24	PH1-OSC_OUT	RCC_OSC_OUT	
+34	PA0-WKUP	GPIO_EXTI0	INTINPUT
+101	PA9	USART1_TX	
+102	PA10	USART1_RX	
+105	PA13	SYS_JTMS-SWDIO	
+109	PA14	SYS_JTCK-SWCLK	
+136	PB6	I2C1_SCL	
+137	PB7	I2C1_SDA	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : STM32_HardWareI2C_MCP23017
+Project Folder : E:\Program\MODULE\MCP23017\STM32\STM32_HardWareI2C_MCP23017
+Toolchain / IDE : MDK-ARM V5
+Firmware Package Name and Version : STM32Cube FW_F4 V1.21.0
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy all used libraries into the project folder
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : Yes
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : Balanced Size/Speed
+
+
+
+
+
+
