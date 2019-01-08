@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     bcm2835_i2c_set_baudrate(10000);  
     printf("DS3231 Test Program ...\n\n"); 
    	
-    //pcf8563SetTime(); 
+    pcf8563SetTime(); 
     while(1)  
     {  
        	pcf8563ReadTime();
