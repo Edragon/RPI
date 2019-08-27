@@ -2,9 +2,12 @@ import spidev as SPI
 import SSD1306
 import time
 
-import Image
-import ImageDraw
-import ImageFont
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+# import Image
+#import ImageDraw
+#import ImageFont
  
 # Raspberry Pi pin configuration:
 RST = 19
