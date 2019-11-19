@@ -10,9 +10,9 @@ can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan_ctypes')# socket
 #for x in can0:
 #    print(x.data)
 
-while True:
-	message = can0.recv(5.0)
-	print(message.arbitration_id)
+#while True:
+#	message = can0.recv(5.0)
+#	print(message.arbitration_id)
 
 
 msg = can0.recv(10.0)
